@@ -1,10 +1,10 @@
 {
   "uuid": "light-up-corners@shuyu",
   "name": "Light Up Corners",
-  "description": "Soft dark-gold corner accents for VS Code and ChatGPT windows. Length adapts to the current monitor; vertical length follows the square of the golden-ratio conjugate. Tested on GNOME 42 / X11.",
+  "description": "Sunlight-gold corner glow and a matching rounded upper-left window corner for VS Code and ChatGPT. Monitor-relative sizing with a golden-ratio fifth-power aspect ratio. Tested on GNOME 42 / X11.",
   "shell-version": [
     "42"
   ],
-  "version": 1,
+  "version": 2,
   "url": "https://github.com/nathan0066/light-up-corners"
 }
