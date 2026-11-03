@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.0
+
+- Keep the 35 px vertical length and change the horizontal ratio to the sixth power of the golden ratio.
+- Update the 2560 px monitor baseline from 388 px to 628 px.
+- Preserve sunlight-gold colors, the 7 px upper-left rounding, and the clean translucent rim.
+- Keep the existing extension UUID for in-place upgrades.
+
 ## 0.2.0
 
 - Use a warmer sunlight-gold palette and a compact 388 × 35 px baseline on a 2560 px monitor.
