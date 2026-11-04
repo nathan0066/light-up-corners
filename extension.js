@@ -6,7 +6,7 @@ const Cairo = imports.cairo;
 const Main = imports.ui.main;
 
 // Calibrated to a 35 px height on a 2560 px wide monitor.
-const VERTICAL_LENGTH_RATIO = ((Math.sqrt(5) - 1) / 2) ** 6;
+const VERTICAL_LENGTH_RATIO = ((Math.sqrt(5) - 1) / 2) ** 8;
 const HORIZONTAL_MONITOR_RATIO = 35 / VERTICAL_LENGTH_RATIO / 2560;
 const CANVAS_SCALE = 2;
 const CORNER_RADIUS = 7;
