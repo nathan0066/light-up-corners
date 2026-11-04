@@ -1,6 +1,6 @@
 # Light Up Corners · 点亮角落
 
-A GNOME Shell extension that adds a sunlight-gold glow and a matching rounded upper-left window corner to the upper-left corner of VS Code and ChatGPT windows, making overlapping dark windows easier to distinguish.
+A GNOME Shell extension that adds a sunlight-gold glow and a matching rounded upper-left corner to VS Code and ChatGPT desktop windows, making overlapping dark windows easier to distinguish.
 
 [中文安装说明](README.zh-CN.md)
 
@@ -8,16 +8,16 @@ A GNOME Shell extension that adds a sunlight-gold glow and a matching rounded up
 
 *Illustration generated with the extension renderer; not a desktop screenshot.*
 
-## v0.4.0 compatibility
+## Compatibility
 
-Tested on GNOME Shell 42.9 with X11. The package declares support for GNOME 42 only. Other GNOME versions, Wayland, fractional scaling, and different application distributions have not been verified. Ubuntu alone does not establish compatibility: check `gnome-shell --version` and `echo "$XDG_SESSION_TYPE"` first.
+Prepared and syntax-checked for GNOME Shell 42.9 on X11. The package declares support for GNOME 42 only. Other GNOME versions, Wayland, fractional scaling, and different application distributions have not been verified. Check `gnome-shell --version` and `echo "$XDG_SESSION_TYPE"` before installing.
 
 ## Appearance
 
 - Continuous sunlight-gold top edge, rounded corner, and left edge.
 - The actual window is rounded only at the upper-left corner (7 px); a 0.5 px content inset keeps the translucent gold rim clean. The other three corners stay unchanged.
-- Horizontal length: 64.228710% of the window's monitor width (1644 px on a 2560 px wide monitor).533184% of the window's monitor width (628 px on a 2560 px wide monitor).
-- Vertical length: horizontal length × ((√5 − 1) / 2)⁸, approximately 2.128624% (35 px at the default size).572809% (35 px at the default size).
+- Horizontal length: 64.228710% of the window's monitor width (1644 px on a 2560 px wide monitor).
+- Vertical length: horizontal length × ((√5 − 1) / 2)⁸, approximately 2.128624% (35 px at the 2560 px baseline).
 - Active windows are brighter; fullscreen windows have neither glow nor corner clipping.
 - The glow follows window stacking and does not accept pointer input. Corner clipping is visual; it does not alter the application's rectangular input region.
 - Only X11 window classes `code` and `Chatgpt` are matched. Browser tabs and other app variants are not included.
@@ -25,7 +25,7 @@ Tested on GNOME Shell 42.9 with X11. The package declares support for GNOME 42 o
 
 ## Install
 
-Download the `.shell-extension.zip` release asset and run in its directory:
+In the directory containing the package, run:
 
 ```sh
 gnome-extensions install ./light-up-corners@shuyu.shell-extension.zip
@@ -66,7 +66,7 @@ The ZIP contains readable JavaScript, metadata, and the license. It needs no Nod
 
 ## Validation and development
 
-The appearance was accepted on the original GNOME 42.9 / X11 setup. Syntax, Cairo rendering, simulated monitor-size updates, window-size clipping, and signal cleanup were checked. Cross-machine installation and live resolution changes remain to be verified by testers. The v0.4.0 appearance, including the cleaned rounded edge, was accepted on the original machine. Additional checks cover shader rendering with GNOME offscreen padding, premultiplied alpha, application filtering, fullscreen transitions, and effect cleanup. Desktop interaction and performance on other machines remain unverified.
+The sixth-power appearance was accepted on the original GNOME 42.9 / X11 setup. The eighth-power length is newly packaged for local preview; confirm the visual result after installing. JavaScript syntax and package contents were checked. Cross-machine installation and performance remain unverified.
 
 Change `HORIZONTAL_MONITOR_RATIO` in `extension.js` to adjust horizontal length. Vertical length follows automatically. Reload Shell after code changes.
 

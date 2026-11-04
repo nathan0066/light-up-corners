@@ -62,6 +62,6 @@ gnome-extensions info light-up-corners@shuyu
 gdbus call --session --dest org.gnome.Shell.Extensions --object-path /org/gnome/Shell/Extensions --method org.gnome.Shell.Extensions.GetExtensionErrors light-up-corners@shuyu
 ```
 
-目前已确认原开发机的最终视觉效果，并验证语法、Cairo 绘制、着色器裁剪、GNOME 特效画布边距、半透明混合、应用筛选、全屏切换及清理逻辑。其他机器的安装、交互、性能与实际切换分辨率仍待试用确认。
+此前六次方版本的视觉效果已在原开发机确认。八次方长度是本地预览版本，安装后请确认视觉效果；本包已检查 JavaScript 语法和 ZIP 内容。其他机器的安装交互与性能尚未验证。
 
 此项目使用 AI 辅助开发，源码随包提供，采用 MIT 许可证；发布维护者应阅读并理解实现。
